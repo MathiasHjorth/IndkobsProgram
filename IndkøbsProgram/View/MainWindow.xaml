@@ -1,0 +1,59 @@
+﻿<Window x:Class="IndkøbsProgram.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IndkøbsProgram"
+        mc:Ignorable="d"
+        Title="IndkøbsProgram" Height="500" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Background="White" Name="Forside">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="240"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        
+        <StackPanel Name="MenuPanel" Grid.Column="0">
+            <TextBlock 
+                Name="MenuTxtBlock"
+                Text="Menu" 
+                FontFamily="Bahnschrift" 
+                HorizontalAlignment="Center"
+                FontSize="22" 
+                FontWeight="Bold">
+            </TextBlock>
+            <Button
+                Name="HomeBtn"
+                Content="Forside"
+                Height="50"
+                FontSize="14"
+                Width="Auto"
+                Margin="0,0,0,1" Click="HomeBtn_Click"
+                >
+            </Button>
+            <Button
+                Name="StatisticsBtn"
+                Content="Statistik"
+                Height="50"
+                FontSize="14"
+                Width="Auto"
+                Margin="0,0,0,1" Click="StatisticsBtn_Click"
+                >
+            </Button>
+            <Button
+                Name="CloseBtn"
+                Content="Afslut"
+                Height="50"
+                FontSize="14"
+                Width="Auto"
+                Margin="0,0,0,1" Click="CloseBtn_Click"
+                >
+            </Button>
+        </StackPanel>
+        
+        <!--Dynamisk sektion-->
+        <Frame Name="MainContainer" Grid.Column="1" NavigationUIVisibility="Hidden">
+        </Frame>
+       
+    </Grid>
+</Window>
